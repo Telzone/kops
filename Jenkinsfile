@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment {
-    DOCKERHUB_CREDENTIALS = credentials('iccp-dockerhub')
+    DOCKERHUB_CREDENTIALS = credentials('benzone')
     }
     stages { 
         stage('SCM Checkout') {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('login to dockerhub') {
             steps{
-                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-Abhishek@123'
             }
         }
         stage('push image') {
